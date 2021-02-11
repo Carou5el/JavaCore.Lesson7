@@ -24,8 +24,8 @@ public class Main {
     public static String[][] testString = {
                                             {"234", "234", "34", "324"},
                                             {"234", "234", "34", "324"},
-                                            {"234", "234", "dddd", "324"},
-                                            {"234", "234", "34", "324"}
+                                            {"234", "234", "234", "324"},
+                                            {"234", "234", "ddd", "324"}
                                         };
 
     public static Integer[][] testResultArray;
@@ -165,7 +165,7 @@ public class Main {
                 try {
                     resultArray[i][j] = Integer.parseInt(strings[i][j]);
                 } catch(NumberFormatException e) {
-                    throw new MyArrayDataException(i, j);
+                    e.getClass();
                 }
             }
         }
