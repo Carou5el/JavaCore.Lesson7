@@ -3,8 +3,8 @@ package kulkov.JavaCore;
 import java.util.Random;
 
 public class RunTrack extends Barrier{
-    private final int MIN_RUN_LENGTH = 1000;                // Дорожка от 10 м.
-    private final int MAX_RUN_LENGTH = 15000;               // Дорожка до 150 м.
+    private final int MIN_RUN_LENGTH = 300;                // Дорожка от 3 м.
+    private final int MAX_RUN_LENGTH = 10000;               // Дорожка до 100 м.
 
     private int runLength;
 

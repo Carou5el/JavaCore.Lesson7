@@ -7,7 +7,7 @@ public class Robot {
     private final int MIN_HIGH_LIMIT = 50;                          // ..все могут прыгнуть на 50 см, как минимум.
     private final int MAX_HIGH_LIMIT = 200;                         // предел высоты прыжка
     private final int MIN_DIST_LIMIT = 1000;                        // ..все могут пробежать хотя бы 10 м
-    private final int MAX_DIST_LIMIT = 30000;                       // условный предел по бегу - 300 м
+    private final int MAX_DIST_LIMIT = 40000;                       // условный предел по бегу - 400 м
 
     private int highLimit;
     private int distanceLimit;

@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class Main {
     public static int PERS_QNTY = 10;
-    public static int BARRIERS_QNTY = 10;
+    public static int BARRIERS_QNTY = 4;
 
     public static void main(String[] args) {
         Random generator = new Random();
@@ -85,11 +85,6 @@ public class Main {
         }
 
         // Вывод результатов в консоль.
-        System.out.printf("pers / #\t");
-        for(int i = 0; i < BARRIERS_QNTY; i++) {
-            System.out.printf("%d\t", i);
-        }
-        System.out.printf("\n");
         // Для Human.
         for(int i = 0; i < PERS_QNTY; i++)  {
             System.out.printf("hum[%d]\t", i);
@@ -118,12 +113,4 @@ public class Main {
         }
 
     }
-
-//    public static <T> void initPersArray(T[] array)  {
-//        for(int i = 0; i < array.length; i++) {
-//            array[i] = new array[i].getClass()
-//        }
-//
-//
-//    }
 }

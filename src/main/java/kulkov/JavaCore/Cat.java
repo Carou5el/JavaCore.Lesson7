@@ -8,7 +8,7 @@ public class Cat {
     private final int MIN_HIGH_LIMIT = 70;                          // ..все могут прыгнуть на 70 см, как минимум.
     private final int MAX_HIGH_LIMIT = 150;                         // предел высоты прыжка
     private final int MIN_DIST_LIMIT = 1000;                        // ..все могут пробежать хотя бы 10 м
-    private final int MAX_DIST_LIMIT = 30000;                       // условный предел по бегу - 300 м
+    private final int MAX_DIST_LIMIT = 10000;                       // условный предел по бегу - 100 м
 
     private int highLimit;
     private int distanceLimit;

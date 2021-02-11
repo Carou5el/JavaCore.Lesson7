@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Wall extends Barrier{
     private final int MIN_WALLS_HIGH = 40;
-    private final int MAX_WALLS_HIGH = 110;
+    private final int MAX_WALLS_HIGH = 170;
 
     private int highWall;
 
