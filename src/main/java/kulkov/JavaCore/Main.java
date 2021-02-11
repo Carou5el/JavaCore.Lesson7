@@ -21,8 +21,29 @@ import java.util.Random;
 public class Main {
     public static int PERS_QNTY = 10;
     public static int BARRIERS_QNTY = 4;
+    public static String[][] testString = {
+                                            {"234", "234", "34", "324"},
+                                            {"234", "234", "34", "324"},
+                                            {"234", "234", "dddd", "324"},
+                                            {"234", "234", "34", "324"}
+                                        };
+
+    public static Integer[][] testResultArray;
 
     public static void main(String[] args) {
+//        Task1();
+        try {
+            testResultArray = Task2(testString);
+        } catch(MyArraySizeException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        } catch(MyArrayDataException e) {
+            e.printStackTrace();
+            System.out.println(e.getMes());
+        }
+    }
+
+    public static void Task1()  {
         Random generator = new Random();
         // Матрица результатов.
         boolean[][] result_humans = new boolean[BARRIERS_QNTY][PERS_QNTY];
@@ -111,6 +132,43 @@ public class Main {
             }
             System.out.printf("\n");
         }
+    }
 
+    public static Integer[][] Task2(String[][] strings) throws MyArraySizeException, MyArrayDataException {
+        /*
+            Метод, на вход которого подаётся 2-мерный массив строк размером 4х4.
+            При подаче массива иной размерности - исключение MyArraySizeException.
+
+            После преобразовать поэлементно строки в целые числа.
+            При невозможности - исключение MyArrayDataException с информацией о проблемной ячейке.
+
+            В методе main обработать данные исключения.
+         */
+        final int X_SIZE_MY_ARRAY = 4;
+        final int Y_SIZE_MY_ARRAY = 4;
+
+        boolean checkInputArray = true;
+
+        checkInputArray &= (strings.length == Y_SIZE_MY_ARRAY);
+
+        for(int i = 0; i < strings.length; i++) {
+            checkInputArray &= (strings[i].length == X_SIZE_MY_ARRAY);
+        }
+
+        if(!checkInputArray)   {
+            throw new MyArraySizeException("Не верная размерность массива.");
+        }
+        Integer[][] resultArray = new Integer[Y_SIZE_MY_ARRAY][X_SIZE_MY_ARRAY];
+
+        for(int i = 0; i < Y_SIZE_MY_ARRAY; i++) {
+            for(int j = 0; j < X_SIZE_MY_ARRAY; j++)    {
+                try {
+                    resultArray[i][j] = Integer.parseInt(strings[i][j]);
+                } catch(NumberFormatException e) {
+                    throw new MyArrayDataException(i, j);
+                }
+            }
+        }
+        return resultArray;
     }
 }
