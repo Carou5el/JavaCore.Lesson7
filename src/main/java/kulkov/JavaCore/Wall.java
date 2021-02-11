@@ -3,6 +3,9 @@ package kulkov.JavaCore;
 import java.util.Random;
 
 public class Wall {
+    private final int MIN_WALLS_HIGH = 40;
+    private final int MAX_WALLS_HIGH = 110;
+
     private int highWall;
 
     public void setHighWall(int highWall) {
@@ -16,6 +19,6 @@ public class Wall {
     // Constructor.
     public Wall() {
         Random generator = new Random();
-        this.highWall = generator.nextInt(150);
+        this.highWall = generator.nextInt((MAX_WALLS_HIGH - MIN_WALLS_HIGH)) + MIN_WALLS_HIGH;
     }
 }
