@@ -165,7 +165,7 @@ public class Main {
                 try {
                     resultArray[i][j] = Integer.parseInt(strings[i][j]);
                 } catch(NumberFormatException e) {
-                    e.getClass();
+                    throw new MyArrayDataException(i, j);
                 }
             }
         }
