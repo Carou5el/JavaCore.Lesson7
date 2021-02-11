@@ -2,7 +2,7 @@ package kulkov.JavaCore;
 
 import java.util.Random;
 
-public class Wall {
+public class Wall extends Barrier{
     private final int MIN_WALLS_HIGH = 40;
     private final int MAX_WALLS_HIGH = 110;
 
@@ -19,6 +19,6 @@ public class Wall {
     // Constructor.
     public Wall() {
         Random generator = new Random();
-        this.highWall = generator.nextInt((MAX_WALLS_HIGH - MIN_WALLS_HIGH)) + MIN_WALLS_HIGH;
+        this.highWall = generator.nextInt((this.MAX_WALLS_HIGH - this.MIN_WALLS_HIGH)) + this.MIN_WALLS_HIGH;
     }
 }
