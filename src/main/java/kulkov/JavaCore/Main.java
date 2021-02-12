@@ -25,22 +25,23 @@ public class Main {
                                             {"234", "234", "34", "324"},
                                             {"234", "234", "34", "324"},
                                             {"234", "234", "234", "324"},
-                                            {"234", "234", "ddd", "324"}
+                                            {"234", "234", "ddd", "324", "33"}
                                         };
 
     public static Integer[][] testResultArray;
 
     public static void main(String[] args) {
         Task1();
-//        try {
-//            testResultArray = Task2(testString);
-//        } catch(MyArraySizeException e) {
-//            e.printStackTrace();
-//            System.out.println(e.getMessage());
-//        } catch(MyArrayDataException e) {
-//            e.printStackTrace();
-//            System.out.println(e.getMes());
-//        }
+        
+        try {
+            testResultArray = Task2(testString);
+        } catch(MyArraySizeException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        } catch(MyArrayDataException e) {
+            e.printStackTrace();
+            System.out.println(e.getMes());
+        }
     }
 
     public static void Task1()  {
