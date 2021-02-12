@@ -31,16 +31,16 @@ public class Main {
     public static Integer[][] testResultArray;
 
     public static void main(String[] args) {
-//        Task1();
-        try {
-            testResultArray = Task2(testString);
-        } catch(MyArraySizeException e) {
-            e.printStackTrace();
-            System.out.println(e.getMessage());
-        } catch(MyArrayDataException e) {
-            e.printStackTrace();
-            System.out.println(e.getMes());
-        }
+        Task1();
+//        try {
+//            testResultArray = Task2(testString);
+//        } catch(MyArraySizeException e) {
+//            e.printStackTrace();
+//            System.out.println(e.getMessage());
+//        } catch(MyArrayDataException e) {
+//            e.printStackTrace();
+//            System.out.println(e.getMes());
+//        }
     }
 
     public static void Task1()  {
