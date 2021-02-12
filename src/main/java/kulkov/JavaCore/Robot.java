@@ -2,7 +2,7 @@ package kulkov.JavaCore;
 
 import java.util.Random;
 
-public class Robot {
+public class Robot implements Action {
 
     private final int MIN_HIGH_LIMIT = 50;                          // ..все могут прыгнуть на 50 см, как минимум.
     private final int MAX_HIGH_LIMIT = 200;                         // предел высоты прыжка
